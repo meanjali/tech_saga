@@ -22,6 +22,10 @@ environment:
 
 dependencies:
   lorem_ipsum: any
+  epub_viewer: 0.1.9
+  permission_handler: ^4.2.0+hotfix.1
+  dio: ^3.0.9
+  path_provider: ^1.4.0
   flutter:
     sdk: flutter
 
@@ -39,6 +43,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  plugin:
+    pluginClass: EpubViewerPlugin
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -49,6 +56,7 @@ flutter:
   assets:
     - images/bg.png
     - images/book.png
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

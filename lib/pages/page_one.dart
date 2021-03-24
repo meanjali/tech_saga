@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+import '../eBook.dart';
 class PageOne extends StatefulWidget {
   @override
   _PageOneState createState() => _PageOneState();
@@ -76,12 +77,15 @@ class BookInfo extends StatelessWidget {
 //                    fit: BoxFit.fill
 //                  )
 //                ),
-                  child: Image.asset(
-                    "images/book.png",
-                    //height: double.infinity,
-                    //width: double.infinity,
-                    alignment: Alignment.topLeft,
-                    fit: BoxFit.fitWidth,
+                  child: InkWell(
+                    onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>eBook()));},
+                    child: Image.asset(
+                      "images/book.png",
+                      //height: double.infinity,
+                      //width: double.infinity,
+                      alignment: Alignment.topLeft,
+                      fit: BoxFit.fitWidth,
+                    ),
                   ),
                 )),
             Expanded(
